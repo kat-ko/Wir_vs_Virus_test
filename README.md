@@ -1,37 +1,19 @@
 # Data Analysis Algorithm
 
-Der Analyse Algorithmus hat das Ziel, die vom Nutzer eingegebenen Daten auszuwerten. Die Eingaben erfolgen über den ???? in Kapitel XY beschriebenen Fragebogen. Erfasst werden dabei sowohl Symptome wie Fieber und Husten, als auch Angaben zu Alter, Wohnsituation, beruflichem Umfeld etc.
+Der Analyse Algorithmus hat das Ziel, die vom Nutzer eingegebenen Daten auszuwerten. Die Eingaben erfolgen über die Benutzeroberfläche. Erfasst werden dabei sowohl Symptome wie Fieber und Husten, als auch Angaben zu Alter, Wohnsituation, beruflichem Umfeld etc.
 
-Das Ergebnis des Algorithmus ist eine Wahrscheinlichkeit, hier Disease Probability (DP) genannt, mit der der Nutzer, basierend auf seinen aktuellen (und vergangenen????) Symptomen an COVID-19 erkrankt ist. Die Wahrscheilichkeiten basieren dabei auf Daten der WHO. Im REPORT NAME ???? findet sich eine Auflistung der im Zusammenhang mit der COVID-19 Lungenkrankheit auftretenden Symptome und einer Wahrscheinlichkeit mit der sie bei Patienten beobachtet wurden. 
-
-UND HIER AUCH NOCH CovApp FRAGEBOGEN ERWÄHNEN, AN DEM WIR UNS ORIENTIERT HABEN ???
+Das Ergebnis des Algorithmus ist eine Wahrscheinlichkeit, hier Disease Probability (DP) genannt, mit der der Nutzer, basierend auf seinen aktuellen Symptomen an COVID-19 erkrankt ist. Die Wahrscheilichkeiten basieren dabei auf Daten der WHO. Im  [Report of the WHO-China Joint Mission on Coronavirus Disease 2019 (COVID-19)] (https://www.who.int/docs/default-source/coronaviruse/who-china-joint-mission-on-covid-19-final-report.pdf) findet sich eine Auflistung der, im Zusammenhang mit der COVID-19 Lungenkrankheit, auftretenden Symptome und einer Wahrscheinlichkeit mit der sie bei Patienten beobachtet werden. 
 
 <p align="center">
-<img src="WHO_Symptoms.png" width="600">
+<img src="WHO_Symptoms.png" width="700">
 </p>
 
 Diese Werte dienen dem Analyse Algorithmus als wissenschaftlich fundierte Bemessungsgrundlage. 
 
-Um die Wahrscheinlichkeit mit denen ein Symptom bei einem Patienten auftritt auf unseren Algorithmus zu übertragen, werden die Werte gemittelt, um eine theoretische Gesamtwahrscheinlichkeit von 100% zu erreichen, für den Fall, dass der Nutzer alle Symptome aufweist.
 
-??? HIER RECHNUNG: (87,9 + 67,7 + 38,1 + 18,6 + 14,8 + 13,9 + 13,6 + 11,4 + 5 + 4,8 + 3,7) * %  = 279,5 %
+Zusätzlich fließt eine Bewertung der Schwere des jeweiligen Symptoms mit in die Rechnung ein. Dazu hat der Nutzer die Möglichkeit einen Schieberegler seinem emfinden nach einzustellen. Das Minimum der Skala bedeutet ein Fehlen von Symptomen, das Maximum eine starke Ausprägung jener. Die zugrundeliegende Skala erlaubt dabei Eingabemöglichkeiten in einem Bereich zwischen 0-100. 
 
-Zusätzlich fließt eine Bewertung der Schwere des jeweiligen Symptoms mit in die Rechnung ein. Dazu hat der Nutzer die Möglichkeit einen Schieberegler seinem emfinden nach einzustellen. Das Minimum der Skala bedeutet ein Fehlen von Symptomen, das Maximum eine starke Ausprägung jener. Die zugrundeliegende Skala erlaubt dabei Eingabemöglichkeiten in einem Bereich zwischen 0-100. Eine Ausnahme stellt jedoch der Wert für Fieber da. 
-
-
-Summe Sysprob:
-
-Summe der Prozente aller abgefraten Symptome
-
-Example:
-
- 
-
-
-##Severity
-
-
-??? Sonderfall Fieber EIngabe der Temperatur
+Eine Ausnahme stellt der Wert für Fieber da. Der mögliche Bereich zwischen 36,3 und 42,5 wird mithilfe von nichtlinear auf den Bereich zwischen 0 und 100 abgebildet. Die Transformation erfolgt dabei als Interpolation innerhalb der einzelnen Gruppen von verschiedenen Schweregraden von Fieber. [Fieber](https://www.netdoktor.at/krankheit/fieber-7557)
 
 | Schwere                  | von   |  bis |
 | :-----------------------:|:-----:| :---:|
@@ -44,36 +26,21 @@ Example:
 
 
 
+Um die Wahrscheinlichkeit mit denen ein Symptom bei einem Patienten auftritt auf unseren Algorithmus zu übertragen, werden die Werte gemittelt, um eine theoretische Gesamtwahrscheinlichkeit von 100% zu erreichen, für den Fall, dass der Nutzer alle Symptome aufweist.
+Dazu wird zunächst die Gesamtsumme der Wahrscheinlichkeit aller betrachteten Symptome gebildet.
+
+(87,9 + 67,7 + 38,1 + 18,6 + 14,8 + 13,9 + 13,6 + 11,4 + 5 + 4,8 + 3,7) * %  = 279,5 %
+
+Nun wird die Wahrscheinlichkeit für jedes der Symptome (z. B. Fieber = 87,9 %) geteilt durch die Summe der Wahrscheinlichkeiten. 
+
+Fieber:  87,9% / 2,795 = 31,44%
+Husten: 67,7% / 2,795 = 24,22%
+etc.
 
 
+Darauf folgt die Berechnung der Wahrscheinlichkeit für jedes Symptom (Symptom Probability) unter Einbeziehung des Schweregrades der vom Nutzer angegeben wurde. 
+Die Symptom Probability erfolgt durch Multiplikation von dem Schwerefaktor mit der gemittelten Wahrscheinlichkeit für jedes Symptom.
 
-gemittelte Symptomprobabilty:
-
-gemittelte Sysprob. = Sysprob / SummeSysprob
-
-Example:
-
-gemittelte Sysprob Fieber:  87,9% / 2,795% = 31,44%
-gemittelte Sysprob Husten: 67,7% / 2,795% = 24,22%
-...
-
-
-
-
-
-Disease Probability:
-
-Severity wird umgerechnet in Prozentzahl: (7/10) -> 70%
-
-
-
-Probability  = Severity * gemittelte Symptomprobability
-
-Disease Probability = Summe Probabilities für alle Symptome
-
-Example:
-
-Probability:
 
        Fieber = 38,8 * 31,44%        = 22,008 %
 

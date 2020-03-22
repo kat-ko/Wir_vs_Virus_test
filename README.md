@@ -9,16 +9,12 @@ UND HIER AUCH NOCH CovApp FRAGEBOGEN ERWÄHNEN, AN DEM WIR UNS ORIENTIERT HABEN 
 
 Diese Werte dienen dem Analyse Algorithmus als wissenschaftlich fundierte Bemessungsgrundlage. 
 
+Um die Wahrscheinlichkeit mit denen ein Symptom bei einem Patienten auftritt auf unseren Algorithmus zu übertragen, werden die Werte gemittelt, um eine theoretische Gesamtwahrscheinlichkeit von 100% zu erreichen, für den Fall, dass der Nutzer alle Symptome aufweist.
 
+??? HIER RECHNUNG: (87,9 + 67,7 + 38,1 + 18,6 + 14,8 + 13,9 + 13,6 + 11,4 + 5 + 4,8 + 3,7) * %  = 279,5 %
 
+Zusätzlich fließt eine Bewertung der Schwere des jeweiligen Symptoms mit in die Rechnung ein. Dazu hat der Nutzer die Möglichkeit einen Schieberegler (Slider???) einzustellen, bei dem das Minimum ein Fehlen von Symptomen bedeutet und das Maximum eine starke Ausprägung jener. Die zugrundeliegende Skala erlaubt dabei Eingabemöglichkeiten in einem Bereich zwischen 0-100. Eine Ausnahme stellt jedoch der Wert für Fieber da. 
 
-Symptomprobability (WHO):
-
-Fieber -> 87,9%
-
-Husten -> 67,7%
-
-.....
 
 Summe Sysprob:
 
@@ -26,9 +22,23 @@ Summe der Prozente aller abgefraten Symptome
 
 Example:
 
- (87,9 + 67,7 + 38,1 + 18,6 + 14,8 + 13,9 + 13,6 + 11,4 + 5 + 4,8 + 3,7) * %
+ 
 
-= 279,5 %
+
+##Severity
+
+
+??? Sonderfall Fieber EIngabe der Temperatur
+
+| Schwere                  | von   |  bis |
+| :-----------------------:|:-----:| :---:|
+| Normale Körpertemperatur | 36,3  | 37,4 |
+| Erhöhte Temperatur       | 37,5  |  38  |
+| Leichtes Fieber          | 38,1  | 38,5 |
+| Mäßiges Fieber           | 38,6  |  39  |
+| Hohes Fieber             | 39,1  | 39,9 |
+| Sehr hohes Fieber        |  40   | 42,5 |
+
 
 
 
@@ -43,6 +53,7 @@ Example:
 gemittelte Sysprob Fieber:  87,9% / 2,795% = 31,44%
 gemittelte Sysprob Husten: 67,7% / 2,795% = 24,22%
 ...
+
 
 
 

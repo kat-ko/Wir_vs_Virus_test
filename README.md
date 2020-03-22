@@ -6,11 +6,8 @@ Das Ergebnis des Algorithmus ist eine Wahrscheinlichkeit, hier Disease Probabili
 
 UND HIER AUCH NOCH CovApp FRAGEBOGEN ERWÄHNEN, AN DEM WIR UNS ORIENTIERT HABEN ???
 
-
-![alt text](https://github.com/kat-ko/testestest/blob/master/WHO_Symptoms.png "title text???")
-
 <p align="center">
-<img src="WHO_Symptoms.png" height="400">
+<img src="WHO_Symptoms.png" width="400">
 </p>
 
 Diese Werte dienen dem Analyse Algorithmus als wissenschaftlich fundierte Bemessungsgrundlage. 

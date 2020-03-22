@@ -50,11 +50,11 @@ Die Symptom Probability erfolgt durch Multiplikation von dem Schwerefaktor mit d
 
        Kurzatmigkeit = 30% * 6,654         = 1,996 %
 
-      Muskel-/Gelenkschm. = 40% * 5,295%   = 2,118 %
+      Muskel-/Gelenkschm. = 40% * 5,295%     = 2,118 %
 
       Halsschmerz = 30% * 4,97%            = 1,491 %
 
-      Kopfschmerz = 20% * 4,571%           = 0,9142 %
+      Kopfschmerz = 20% * 4,571%             = 0,9142 %
 
       Schüttelfrost = 70% * 4,078%         =  1,459 %
 

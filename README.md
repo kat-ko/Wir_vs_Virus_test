@@ -4,8 +4,8 @@ Der Analyse Algorithmus hat das Ziel, die vom Nutzer eingegebenen Daten auszuwer
 Das Ergebnis des Algorithmus ist eine Wahrscheinlichkeit, hier Disease Probability (DP) genannt, mit der der Nutzer, basierend auf seinen aktuellen (und vergangenen????) Symptomen an COVID-19 erkrankt ist. Die Wahrscheilichkeiten basieren dabei auf Daten der WHO. Im REPORT NAME ???? findet sich eine Auflistung der im Zusammenhang mit der COVID-19 Lungenkrankheit auftretenden Symptome und einer Wahrscheinlichkeit mit der sie bei Patienten beobachtet wurden. 
 UND HIER AUCH NOCH CovApp FRAGEBOGEN ERWÄHNEN, AN DEM WIR UNS ORIENTIERT HABEN ???
 
-HIER BILD DAZU
 
+![alt text](https://github.com/kat-ko/testestest/blob/master/WHO_Symptoms.png "title text???")
 
 Diese Werte dienen dem Analyse Algorithmus als wissenschaftlich fundierte Bemessungsgrundlage. 
 

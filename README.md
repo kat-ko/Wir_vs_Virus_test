@@ -1,5 +1,15 @@
 # Data Analysis Algorithm
 
+Der Analyse Algorithmus hat das Ziel, die vom Nutzer eingegebenen Daten auszuwerten. Die Eingaben erfolgen über den ???? in Kapitel XY beschriebenen Fragebogen. Erfasst werden dabei sowohl Symptome wie Fieber und Husten, als auch Angaben zu Alter, Wohnsituation, beruflichem Umfeld etc.
+Das Ergebnis des Algorithmus ist eine Wahrscheinlichkeit, hier Disease Probability (DP) genannt, mit der der Nutzer, basierend auf seinen aktuellen (und vergangenen????) Symptomen an COVID-19 erkrankt ist. Die Wahrscheilichkeiten basieren dabei auf Daten der WHO. Im REPORT NAME ???? findet sich eine Auflistung der im Zusammenhang mit der COVID-19 Lungenkrankheit auftretenden Symptome und einer Wahrscheinlichkeit mit der sie bei Patienten beobachtet wurden. 
+UND HIER AUCH NOCH CovApp FRAGEBOGEN ERWÄHNEN, AN DEM WIR UNS ORIENTIERT HABEN ???
+
+HIER BILD DAZU
+
+
+Diese Werte dienen dem Analyse Algorithmus als wissenschaftlich fundierte Bemessungsgrundlage. 
+
+
 
 
 Symptomprobability (WHO):

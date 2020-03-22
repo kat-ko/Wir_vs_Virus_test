@@ -42,29 +42,29 @@ Darauf folgt die Berechnung der Wahrscheinlichkeit für jedes Symptom (Symptom P
 Die Symptom Probability erfolgt durch Multiplikation von dem Schwerefaktor mit der gemittelten Wahrscheinlichkeit für jedes Symptom.
 
 
-       Fieber = 38,8 * 31,44%        = 22,008 %
+       Fieber = 38,8 * 31,44%              = 22,008 %
 
-       Husten = 80% * 24,22%         = 19,376 %
+       Husten = 80% * 24,22%               = 19,376 %
 
        Abgeschlagenheit = 60% * 13,63%     = 8,178 %
 
-       Kurzatmigkeit = 30% * 6,654       = 1,996 %
+       Kurzatmigkeit = 30% * 6,654         = 1,996 %
 
       Muskel-/Gelenkschm. = 40% * 5,295%   = 2,118 %
 
-      Halsschmerz = 30% * 4,97%      = 1,491 %
+      Halsschmerz = 30% * 4,97%            = 1,491 %
 
-      Kopfschmerz = 20% * 4,571%      = 0,9142 %
+      Kopfschmerz = 20% * 4,571%           = 0,9142 %
 
-      Schüttelfrost = 70% * 4,078%       =  1,459 %
+      Schüttelfrost = 70% * 4,078%         =  1,459 %
 
       Übelkeit = 0 %
 
-      Verstopfte Nase = 40% * 1,71%      = 0,686 %
+      Verstopfte Nase = 40% * 1,71%        = 0,686 %
 
-      Durchfall = 0 %                    __________
+      Durchfall = 0 %                     __________
 
-                        57,6002 %
+                                           57,6002 %
 
 
 

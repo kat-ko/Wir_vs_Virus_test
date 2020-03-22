@@ -7,7 +7,7 @@ Das Ergebnis des Algorithmus ist eine Wahrscheinlichkeit, hier Disease Probabili
 UND HIER AUCH NOCH CovApp FRAGEBOGEN ERWÄHNEN, AN DEM WIR UNS ORIENTIERT HABEN ???
 
 <p align="center">
-<img src="WHO_Symptoms.png" width="400">
+<img src="WHO_Symptoms.png" width="600">
 </p>
 
 Diese Werte dienen dem Analyse Algorithmus als wissenschaftlich fundierte Bemessungsgrundlage. 
